@@ -1,0 +1,28 @@
+[project]
+name = "otto"
+version = "0.1.0"
+description = "Add your description here"
+authors = [{ name = "Donald Thompson", email = "witt3rd@witt3rd.com" }]
+dependencies = [
+    "openai>=1.30.5",
+    "langgraph>=0.0.61",
+    "litellm>=1.40.0",
+    "langchain-community>=0.2.1",
+    "langchain-openai>=0.1.8",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = ["ipykernel>=6.29.4"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/otto"]
